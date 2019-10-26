@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+  <title>Password Generator</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <a href="#" class="navbar-brand">Password Generator</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="card my-5 container text-warning p-3">
+    <div class="card-body">
+      <form id="main-form">
+        <!-- Input -->
+        <div class="form-group">
+          <input type="number" id="length" min="6" placeholder="Password length" class="form-control"
+            style="width: 220px" required>
+        </div>
+        <!-- Numbers -->
+        <div class="form-group custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="numbers" required>
+          <label for="numbers" class="custom-control-label">Include numbers</label>
+        </div>
+        <!-- Lowercase chars -->
+        <div class="form-group custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="lower-characters">
+          <label for="lower-characters" class="custom-control-label">Include lowercase characters</label>
+        </div>
+        <!-- Uppercase chars -->
+        <div class="form-group custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="upper-characters">
+          <label for="upper-characters" class="custom-control-label">Include uppercase characters</label>
+        </div>
+        <!-- Dollar sign -->
+        <div class="form-group custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="dollar-sign">
+          <label for="dollar-sign" class="custom-control-label">Include $ sign</label>
+        </div>
+        <!-- Underscore sign -->
+        <div class="form-group custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="underscore-sign">
+          <label for="underscore-sign" class="custom-control-label">Include _ sign</label>
+        </div>
+        <!-- Ampersand sign -->
+        <div class="form-group custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="ampersand-sign">
+          <label for="ampersand-sign" class="custom-control-label">Include & sign</label>
+        </div>
+        <!-- Asterix sign -->
+        <div class="form-group custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="asterix-sign">
+          <label for="asterix-sign" class="custom-control-label">Include * sign</label>
+        </div>
+        <!-- Submit btn -->
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-success">Generate</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="text-dark p-3">
+    <div class="container">
+      <span class="lead">Copyright &copy; 2019. Coded with 🖤 by Akari Amano.</span>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
