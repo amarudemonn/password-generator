@@ -1,3 +1,5 @@
+const mainForm = document.querySelector('#main-form');
+const cardBody = document.querySelector('.card-body');
 const numbersSwitch = document.querySelector('#numbers');
 const lowerCaseSwitch = document.querySelector('#lower-characters');
 const upperCaseSwitch = document.querySelector('#upper-characters');
@@ -84,4 +86,20 @@ asterixSignSwitch.addEventListener('change', e => {
     isAsterixSignSwitchChanged = false;
     password.deleteAsterixSign();
   }
+});
+
+mainForm.addEventListener('submit', e => {
+  let result = '';
+
+  for (let i = 0; i < +document.querySelector('#length').value; i++) {
+    result += password.generateRandomSymbol();
+  }
+
+  cardBody.insertAdjacentHTML('afterend', `
+    <div class="p-3 my-2 border rounded rounded-sm" style="background-color: #fff;">
+      <p class="lead text-center m-0" style="font-size: 2rem; color: #000;">${ result }</p>
+    </div>
+  `);
+
+  e.preventDefault();
 });

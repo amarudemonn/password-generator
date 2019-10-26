@@ -59,7 +59,7 @@ class Password {
     this.alphabet = this.alphabet.replace('*', '');
   }
 
-  getRandomSymbol() {
+  generateRandomSymbol() {
     return this.alphabet[Math.trunc(Math.random() * this.alphabet.length)];
   }
 }
