@@ -1,5 +1,5 @@
 const mainForm = document.querySelector('#main-form');
-const cardBody = document.querySelector('.card-body');
+const row = document.querySelector('.row');
 const numbersSwitch = document.querySelector('#numbers');
 const lowerCaseSwitch = document.querySelector('#lower-characters');
 const upperCaseSwitch = document.querySelector('#upper-characters');
@@ -7,6 +7,7 @@ const dollarSignSwitch = document.querySelector('#dollar-sign');
 const underscoreSignSwitch = document.querySelector('#underscore-sign');
 const ampersandSignSwitch = document.querySelector('#ampersand-sign');
 const asterixSignSwitch = document.querySelector('#asterix-sign');
+const spinner = document.querySelector('#spinner');
 
 const password = new Password();
 
@@ -89,17 +90,25 @@ asterixSignSwitch.addEventListener('change', e => {
 });
 
 mainForm.addEventListener('submit', e => {
-  let result = '';
+  spinner.classList.remove('d-none');
+  spinner.classList.add('d-block');
 
-  for (let i = 0; i < +document.querySelector('#length').value; i++) {
-    result += password.generateRandomSymbol();
-  }
+  setTimeout(() => {
+    spinner.classList.remove('d-block');
+    spinner.classList.add('d-none');
 
-  cardBody.insertAdjacentHTML('afterend', `
-    <div class="p-3 my-2 border rounded rounded-sm" style="background-color: #fff;">
-      <p class="lead text-center m-0" style="font-size: 2rem; color: #000;">${ result }</p>
-    </div>
-  `);
+    let result = '';
+
+    for (let i = 0; i < +document.querySelector('#length').value; i++) {
+      result += password.generateRandomSymbol();
+    }
+
+    row.insertAdjacentHTML('afterend', `
+      <div class="p-3 my-2 border rounded rounded-sm" style="background-color: #fff;">
+        <p class="lead text-center m-0" style="font-size: 2rem; color: #000;">${ result }</p>
+      </div>
+    `);
+  }, 1800);
 
   e.preventDefault();
 });

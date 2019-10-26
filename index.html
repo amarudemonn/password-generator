@@ -19,53 +19,62 @@
   </header>
 
   <main class="card my-5 container text-warning p-3">
-    <div class="card-body">
-      <form id="main-form">
-        <!-- Input -->
-        <div class="form-group">
-          <input type="number" id="length" min="6" placeholder="Password length" class="form-control"
-            style="width: 220px" required>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card-body">
+          <form id="main-form">
+            <!-- Input -->
+            <div class="form-group">
+              <input type="number" id="length" min="6" placeholder="Password length" class="form-control"
+                style="width: 220px" required>
+            </div>
+            <!-- Numbers -->
+            <div class="form-group custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="numbers" required>
+              <label for="numbers" class="custom-control-label">Include numbers</label>
+            </div>
+            <!-- Lowercase chars -->
+            <div class="form-group custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="lower-characters">
+              <label for="lower-characters" class="custom-control-label">Include lowercase characters</label>
+            </div>
+            <!-- Uppercase chars -->
+            <div class="form-group custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="upper-characters">
+              <label for="upper-characters" class="custom-control-label">Include uppercase characters</label>
+            </div>
+            <!-- Dollar sign -->
+            <div class="form-group custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="dollar-sign">
+              <label for="dollar-sign" class="custom-control-label">Include $ sign</label>
+            </div>
+            <!-- Underscore sign -->
+            <div class="form-group custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="underscore-sign">
+              <label for="underscore-sign" class="custom-control-label">Include _ sign</label>
+            </div>
+            <!-- Ampersand sign -->
+            <div class="form-group custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="ampersand-sign">
+              <label for="ampersand-sign" class="custom-control-label">Include & sign</label>
+            </div>
+            <!-- Asterix sign -->
+            <div class="form-group custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="asterix-sign">
+              <label for="asterix-sign" class="custom-control-label">Include * sign</label>
+            </div>
+            <!-- Submit btn -->
+            <div class="form-group mb-0">
+              <button type="submit" class="btn btn-outline-success">Generate</button>
+            </div>
+          </form>
         </div>
-        <!-- Numbers -->
-        <div class="form-group custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="numbers" required>
-          <label for="numbers" class="custom-control-label">Include numbers</label>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center p-3 align-items-center">
+        <div class="spinner-border d-none" id="spinner" style="width: 7rem; height: 7rem;" role="status">
+          <span class="sr-only">Loading...</span>
         </div>
-        <!-- Lowercase chars -->
-        <div class="form-group custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="lower-characters">
-          <label for="lower-characters" class="custom-control-label">Include lowercase characters</label>
-        </div>
-        <!-- Uppercase chars -->
-        <div class="form-group custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="upper-characters">
-          <label for="upper-characters" class="custom-control-label">Include uppercase characters</label>
-        </div>
-        <!-- Dollar sign -->
-        <div class="form-group custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="dollar-sign">
-          <label for="dollar-sign" class="custom-control-label">Include $ sign</label>
-        </div>
-        <!-- Underscore sign -->
-        <div class="form-group custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="underscore-sign">
-          <label for="underscore-sign" class="custom-control-label">Include _ sign</label>
-        </div>
-        <!-- Ampersand sign -->
-        <div class="form-group custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="ampersand-sign">
-          <label for="ampersand-sign" class="custom-control-label">Include & sign</label>
-        </div>
-        <!-- Asterix sign -->
-        <div class="form-group custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="asterix-sign">
-          <label for="asterix-sign" class="custom-control-label">Include * sign</label>
-        </div>
-        <!-- Submit btn -->
-        <div class="form-group mb-0">
-          <button type="submit" class="btn btn-outline-success">Generate</button>
-        </div>
-      </form>
+      </div>
     </div>
   </main>
 
